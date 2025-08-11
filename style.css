@@ -636,9 +636,10 @@ nav a.active {
 
 /* Social Icons Styling */
 .social-icons {
-  margin-top: 1rem;
+  margin-top: 4rem;
   display: flex;
-  gap: 1rem;
+  justify-content : centre;
+  gap: 1.5rem;
 }
 
 .social-icons a {
