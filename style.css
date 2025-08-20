@@ -574,7 +574,7 @@ nav a.active {
   width: 100%;
   height: 100%;
   background: url("Images/DSC06323\ \(1\).JPG") center/cover no-repeat;
-  filter: brightness(0.6) blur(0px); /* darken & soften */
+  filter: brightness(0.5) blur(0px); /* darken & soften */
   z-index: -1; /* keep it behind the text */
 }
 
@@ -636,10 +636,9 @@ nav a.active {
 
 /* Social Icons Styling */
 .social-icons {
-  margin-top: 4rem;
-  display: flex;
-  justify-content : centre;
-  gap: 1.5rem;
+  margin-top: 1rem;
+  /*display: flex;*/
+  gap: 1rem;
 }
 
 .social-icons a {
@@ -737,8 +736,16 @@ nav a.active {
   }
 
   .about-container {
-    width: 80%;
+    width:60%;
   }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+
+  .about-section::before {
+  background: url("Images/DSC06323\ \(1\).JPG") left /cover no-repeat;
+}
 
   .event-list {
     grid-template-columns: 1fr;
@@ -747,6 +754,18 @@ nav a.active {
   .portfolio-card {
     flex-direction: column;
   }
+
+  .portfolio-intro-container{
+    height: 100vh;
+  }
+  .portfolio-intro{
+    width: 90%;         /* almost full width */
+    padding: 1rem;    /* minimal padding */
+    font-size: 1.3rem; /* smaller text for small phones */
+    line-height: 1.4;   /* tighter for small screens */
+    align-self: center;
+  }
+
 }
 
 /* ===== Large Screens (> 1400px) ===== */
@@ -832,7 +851,7 @@ nav a.active {
 
 @media (max-width: 768px) {
   .about-container {
-    width: 90%;         /* shrink width */
+    width: 50%;         /* shrink width */
     padding: 1rem;      /* less padding */
     font-size: 0.95rem; /* slightly smaller text */
     line-height: 1.4;   /* tighter line spacing */
@@ -841,19 +860,35 @@ nav a.active {
   {
     height: auto;
   }
+   .portfolio-intro-container{
+    height: auto;
+  }
+  .portfolio-intro{
+    width: 90%;         /* almost full width */
+    padding: 1rem;    /* minimal padding */
+    font-size: 1.2rem; /* smaller text for small phones */
+    line-height: 1.4;   /* tighter for small screens */
+    align-self: center;
+  }
+
 }
 
 @media (max-width: 480px) {
   .about-container {
-    width: 80%;         /* almost full width */
+    width: 100%;       
     padding: 1rem;    /* minimal padding */
-    font-size: 0.65rem; /* smaller text for small phones */
-    line-height: 1.2;   /* tighter for small screens */
+    font-size: 0.5rem; /* smaller text for small phones */
+    line-height: 0.8;   /* tighter for small screens */
     align-self: center;
   }
   .about-section
   {
     height: auto;
+  }
+
+  .about-section::before {
+  background: url("Images/DSC06323\ \(1\).JPG") left /cover no-repeat;
+  filter: brightness(0.4) blur(1px);
   }
   .portfolio-intro-container{
     height: auto;
